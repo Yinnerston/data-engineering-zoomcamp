@@ -1,0 +1,18 @@
+Row(('users', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.users`\n(\n  id INT64,\n  first_name STRING,\n  last_name STRING,\n  email STRING,\n  age INT64,\n  gender STRING,\n  state STRING,\n 
+ street_address STRING,\n  postal_code STRING,\n  city STRING,\n  country STRING,\n  latitude FLOAT64,\n  longitude FLOAT64,\n  traffic_source STRING,\n  created_at TIMESTAMP\n)\nOPTIONS(\n  description="Programatically generated users for The Look fictitious e-commerce store"\n);'), {'table_name': 0, 
+'ddl': 1})
+ ---
+Row(('order_items', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.order_items`\n(\n  id INT64,\n  order_id INT64,\n  user_id INT64,\n  product_id INT64,\n  inventory_item_id INT64,\n  status STRING,\n  created_at TIMESTAMP,\n  shipped_at TIMESTAMP,\n  delivered_at TIMESTAMP,\n  returned_at TIMESTAMP,\n  sale_price FLOAT64\n)\nOPTIONS(\n  description="Programatically generated order items for The Look fictitious e-commerce store"\n);'), {'table_name': 0, 'ddl': 1})
+ ---
+Row(('distribution_centers', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.distribution_centers`\n(\n  id INT64,\n  name STRING,\n  latitude FLOAT64,\n  longitude FLOAT64\n)\nOPTIONS(\n  description="The Look fictitious e-commerce dataset: distribution_centers table"\n);'), {'table_name': 0, 'ddl': 1})
+ ---
+Row(('inventory_items', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.inventory_items`\n(\n  
+id INT64,\n  product_id INT64,\n  created_at TIMESTAMP,\n  sold_at TIMESTAMP,\n  cost FLOAT64,\n  product_category STRING,\n  product_name STRING,\n  product_brand STRING,\n  product_retail_price FLOAT64,\n  product_department STRING,\n  product_sku STRING,\n  product_distribution_center_id INT64\n)\nOPTIONS(\n  description="Programatically generated inventory for The Look fictitious e-commerce store"\n);'), {'table_name': 0, 'ddl': 1})
+ ---
+Row(('products', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.products`\n(\n  id INT64,\n  cost FLOAT64,\n  category STRING,\n  name STRING,\n  brand STRING,\n  retail_price FLOAT64,\n  department STRING,\n  sku STRING,\n  distribution_center_id INT64\n)\nOPTIONS(\n  description="The Look fictitious e-commerce dataset - products table"\n);'), {'table_name': 0, 'ddl': 1})
+ ---
+Row(('orders', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.orders`\n(\n  order_id INT64,\n 
+ user_id INT64,\n  status STRING,\n  gender STRING,\n  created_at TIMESTAMP,\n  returned_at TIMESTAMP,\n  shipped_at TIMESTAMP,\n  delivered_at TIMESTAMP,\n  num_of_item INT64\n)\nOPTIONS(\n  description="Programatically generated orders for The Look fictitious e-commerce store"\n);'), {'table_name': 0, 'ddl': 1})
+ ---
+Row(('events', 'CREATE TABLE `bigquery-public-data.thelook_ecommerce.events`\n(\n  id INT64,\n  user_id INT64,\n  sequence_number INT64,\n  session_id STRING,\n  created_at TIMESTAMP,\n  ip_address STRING,\n  city STRING,\n  state STRING,\n  postal_code STRING,\n  browser STRING,\n  traffic_source STRING,\n  uri STRING,\n  event_type STRING\n)\nOPTIONS(\n  description="Programatically generated web events for The Look fictitious e-commerce store"\n);'), {'table_name': 0, 'ddl': 1})
+ ---
