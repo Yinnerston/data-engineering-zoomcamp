@@ -11,8 +11,26 @@ models:
       - name: created_at
         tests:
           - not_null
+  - name: new_events
+    description: View of events created in the last 24 hours.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+          
   - name: stg_users
     description: Users table.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: stg_events
+    description: (id, user_id, session_id, created_at, event_type) from the Events table.
     columns:
       - name: id
         tests:
