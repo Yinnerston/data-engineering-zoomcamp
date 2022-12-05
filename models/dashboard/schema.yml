@@ -1,0 +1,12 @@
+sources:
+  loaded_at_field: _etl_loaded_at
+
+  - name: dashboard
+    database: de-project-369904
+    schema: dbt_nyin
+    tables:
+      - name: new_users
+        freshness: 
+          filter: datediff('created_at', _etl_loaded_at, current_timestamp) < 1
+
+
