@@ -1,16 +1,8 @@
-# sources:
-#   - name: dashboard
-#     database: de-project-369904
-#     schema: dbt_nyin
-#     loaded_at_field: _etl_loaded_at
-#     tables:
-#       - name: new_users
-#         freshness: 
-#           filter: datediff('created_at', _etl_loaded_at, current_timestamp) < 1
 version: 2
 
 models:
   - name: new_users
+    description: View of users created in the last 24 hours.
     columns:
       - name: id
         tests:
@@ -20,6 +12,7 @@ models:
         tests:
           - not_null
   - name: stg_users
+    description: Users table.
     columns:
       - name: id
         tests:
