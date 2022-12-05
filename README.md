@@ -3,7 +3,9 @@
 Dashboard link:
 https://datastudio.google.com/s/qd1dkgpHtms
 
-<p align="center">
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/ee053c59-1b04-4bf6-b8b5-60a1e78d1c75/page/e6d9C" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<!-- <p align="center">
   <a href="https://airtable.com/shr6oVXeQvSI5HuWD"><img src="https://user-images.githubusercontent.com/875246/185755203-17945fd1-6b64-46f2-8377-1011dcb1a444.png" height="50" /></a>
 </p>
 
@@ -224,4 +226,4 @@ Do you want to support our course and our community? Please reach out to [alexey
 Big thanks to other communities for helping us spread the word about the course: 
 
 * [DPhi](https://dphi.tech/)
-* [MLOps.community](https://mlops.community/)
+* [MLOps.community](https://mlops.community/) -->
