@@ -4,12 +4,16 @@
     config(materialized='view')
 }}
 
+
+with users as (
+  select * from {{ ref('stg_users') }}
+)
 /* New customers */
 
 SELECT
   *
 FROM
-  bigquery-public-data.thelook_ecommerce.users
+  users
 WHERE
   created_at >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY)
 
