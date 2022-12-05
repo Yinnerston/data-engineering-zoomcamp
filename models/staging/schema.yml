@@ -1,0 +1,80 @@
+version: 2
+
+models:
+  - name: new_users
+    description: View of users created in the last 24 hours.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+  - name: new_events
+    description: View of events created in the last 24 hours.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+
+  - name: test_new_events
+    description: TEST View of events created in the last 24 hours.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+
+          
+  - name: stg_users
+    description: Users table.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: stg_events
+    description: Events table.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: stg_orders
+    description: Orders table.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_order_items
+    description: Order Items table.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: stg_products
+    description: Products table.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: stg_inventory_items
+    description: Inventory Items table.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+
